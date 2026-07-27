@@ -808,9 +808,18 @@ ul { list-style: none; }
 
 /* === Responsive: Mobile === */
 @media (max-width: 768px) {
+  /* Global dark theme on mobile */
+  body {
+    background: var(--dark);
+    color: var(--white);
+    padding-bottom: 80px;
+  }
+
   .hero-title { font-size: 2.2rem; }
   .hero-subtitle { font-size: 1.1rem; }
-  .section-header h2 { font-size: 1.7rem; }
+  .section-header h2 { font-size: 1.7rem; color: var(--white); }
+  .section-label { color: var(--gold); }
+  .gold-divider { background: rgba(217,166,33,0.4); }
   .sizes-grid { grid-template-columns: 1fr; }
   .specs-grid { grid-template-columns: 1fr 1fr; }
   .why-grid { grid-template-columns: 1fr; }
@@ -820,6 +829,16 @@ ul { list-style: none; }
   .footer-bottom { flex-direction: column; text-align: center; }
 
   .menu-toggle { display: flex; }
+
+  /* Navbar dark on mobile */
+  .navbar {
+    background: var(--dark);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .navbar.scrolled {
+    background: var(--dark);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
 
   .nav-links {
     position: fixed;
@@ -955,9 +974,6 @@ ul { list-style: none; }
   .hero-buttons { display: none; }
   .hero-desc { display: none; }
 
-  /* Adjust body padding for tab bar */
-  body { padding-bottom: 80px; }
-
   /* WhatsApp float above tab bar */
   .whatsapp-float { bottom: 90px; }
 
@@ -965,10 +981,17 @@ ul { list-style: none; }
   .hero-content { padding: 100px 20px 40px; }
   .hero-badge { font-size: 0.75rem; padding: 6px 18px; }
 
-  /* Mobile dark sections */
-  .overview { background: var(--dark); }
-  .overview .section-header h2 { color: var(--white); }
-  .overview .section-label { color: var(--gold); }
+  /* All sections dark on mobile */
+  .overview,
+  .sizes,
+  .specs,
+  .location,
+  .why,
+  .final-cta,
+  .footer {
+    background: var(--dark);
+  }
+
   .overview-text p { color: rgba(255,255,255,0.6); }
   .overview-img-placeholder { border-radius: 12px; }
 
@@ -979,16 +1002,13 @@ ul { list-style: none; }
   .highlight-card h3 { color: var(--white); }
   .highlight-card p { color: rgba(255,255,255,0.5) !important; }
 
-  .sizes { background: var(--dark); }
-  .sizes .section-header h2 { color: var(--white); }
-  .sizes .section-label { color: var(--gold); }
   .size-card { background: var(--dark-card); border-color: rgba(255,255,255,0.08); }
+  .size-card-header { background: var(--dark-card); }
   .size-card-body { background: var(--dark-card); }
+  .size-label { color: var(--white); }
+  .size-value { color: var(--gold); }
   .size-desc { color: rgba(255,255,255,0.5); }
 
-  .specs { background: var(--dark); }
-  .specs .section-header h2 { color: var(--white); }
-  .specs .section-label { color: var(--gold); }
   .spec-item {
     background: var(--dark-card);
     border-color: rgba(255,255,255,0.08);
@@ -996,16 +1016,40 @@ ul { list-style: none; }
   .spec-item span { color: rgba(255,255,255,0.85); }
   .spec-icon-wrap { background: rgba(197,155,39,0.1); }
 
-  .location { background: var(--dark); }
-  .location .section-header h2 { color: var(--white); }
-  .location .section-label { color: var(--gold); }
   .landmarks h3 { color: var(--white); }
   .landmark-name { color: var(--white); }
   .landmark-desc { color: rgba(255,255,255,0.4); }
   .landmark-item { border-bottom-color: rgba(255,255,255,0.08); }
   .landmark-time { background: rgba(197,155,39,0.1); border-color: rgba(197,155,39,0.25); }
 
-  .gold-divider { background: rgba(217,166,33,0.4); }
+  /* Why section dark */
+  .why { border-top: none; }
+  .why-card {
+    background: var(--dark-card);
+    border-color: rgba(255,255,255,0.08);
+  }
+  .why-card h3 { color: var(--white); }
+  .why-card p { color: rgba(255,255,255,0.5); }
+  .why-closing p { color: rgba(255,255,255,0.7); }
+  .section-header-light h2 { color: var(--white); }
+  .section-label-light { color: var(--gold) !important; }
+
+  /* Final CTA dark */
+  .final-cta-bg { display: none; }
+  .final-cta-overlay { display: none; }
+  .final-cta { background: var(--dark-card) !important; }
+  .final-cta-content h2 { color: var(--white); }
+  .final-cta-content p { color: rgba(255,255,255,0.6); }
+
+  /* Footer dark */
+  .footer { border-top: 1px solid rgba(255,255,255,0.08); }
+  .footer-tagline { color: rgba(255,255,255,0.5); }
+  .footer-links a,
+  .footer-extra a { color: rgba(255,255,255,0.6); }
+  .footer-links a:hover,
+  .footer-extra a:hover { color: var(--gold); }
+  .footer-bottom { border-top-color: rgba(255,255,255,0.08); }
+  .footer-bottom p { color: rgba(255,255,255,0.4); }
 }
 
 @media (max-width: 480px) {
