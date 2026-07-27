@@ -57,6 +57,25 @@
         <a href="#sizes" class="btn btn-outline-white">اكتشف وحدتك الآن</a>
         <a href="#overview" class="btn btn-gold">مشاهدة بروشور المشروع</a>
       </div>
+      <!-- Mobile Stats Grid (visible only on mobile) -->
+      <div class="mobile-stats-grid">
+        <div class="mobile-stat-card">
+          <span class="mobile-stat-num">6</span>
+          <span class="mobile-stat-label">وحدات فاخرة</span>
+        </div>
+        <div class="mobile-stat-card">
+          <span class="mobile-stat-num">3</span>
+          <span class="mobile-stat-label">طوابق مستقلة</span>
+        </div>
+        <div class="mobile-stat-card">
+          <span class="mobile-stat-num mobile-stat-text">جاهز</span>
+          <span class="mobile-stat-label">سكن فوري</span>
+        </div>
+      </div>
+      <div class="mobile-hero-cta">
+        <a href="#sizes" class="btn btn-gold btn-block">اكتشف الوحدات السكنية</a>
+        <p class="mobile-hero-sub">مطابق تماماً لكود البناء السعودي مع الضمانات</p>
+      </div>
     </div>
   </section>
 
@@ -257,27 +276,45 @@
           <h3>المعالم القريبة</h3>
           <div class="landmark-item">
             <div class="landmark-time"><span>2</span> دقيقة</div>
-            <div class="landmark-name">طريق الملك فهد</div>
+            <div class="landmark-info">
+              <div class="landmark-name">طريق الملك فهد</div>
+              <div class="landmark-desc">الشريان الرئيسي للرياض</div>
+            </div>
           </div>
           <div class="landmark-item">
             <div class="landmark-time"><span>4</span> دقائق</div>
-            <div class="landmark-name">طريق العروبة</div>
+            <div class="landmark-info">
+              <div class="landmark-name">طريق العروبة</div>
+              <div class="landmark-desc">محور تجاري حيوي</div>
+            </div>
           </div>
           <div class="landmark-item">
             <div class="landmark-time"><span>5</span> دقائق</div>
-            <div class="landmark-name">طريق التخصصي</div>
+            <div class="landmark-info">
+              <div class="landmark-name">طريق التخصصي</div>
+              <div class="landmark-desc">شبكة طرق متصلة</div>
+            </div>
           </div>
           <div class="landmark-item">
             <div class="landmark-time"><span>5</span> دقائق</div>
-            <div class="landmark-name">برج المملكة</div>
+            <div class="landmark-info">
+              <div class="landmark-name">برج المملكة</div>
+              <div class="landmark-desc">أهم مراكز التسوق والأعمال</div>
+            </div>
           </div>
           <div class="landmark-item">
             <div class="landmark-time"><span>6</span> دقائق</div>
-            <div class="landmark-name">مستشفى الحبيب</div>
+            <div class="landmark-info">
+              <div class="landmark-name">مستشفى الحبيب - العليا</div>
+              <div class="landmark-desc">رعاية صحية متميزة</div>
+            </div>
           </div>
           <div class="landmark-item">
             <div class="landmark-time"><span>10</span> دقائق</div>
-            <div class="landmark-name">مستشفى الملك فيصل التخصصي</div>
+            <div class="landmark-info">
+              <div class="landmark-name">مستشفى الملك فيصل التخصصي</div>
+              <div class="landmark-desc">مركز طبي عالمي</div>
+            </div>
           </div>
         </div>
       </div>
@@ -385,6 +422,26 @@
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.675-1.338A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.33 0-4.488-.727-6.266-1.966l-.252-.176-3.226.924.843-3.135-.193-.267A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
     </svg>
   </a>
+
+  <!-- Mobile Bottom Tab Bar -->
+  <nav class="mobile-tab-bar" id="mobileTabBar">
+    <a href="#location" class="tab-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>الموقع</span>
+    </a>
+    <a href="#specs" class="tab-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+      <span>المواصفات</span>
+    </a>
+    <a href="#sizes" class="tab-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+      <span>الوحدات</span>
+    </a>
+    <a href="#hero" class="tab-item active">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12l-2 0 9-9 9 9-2 0"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+      <span>الرئيسية</span>
+    </a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

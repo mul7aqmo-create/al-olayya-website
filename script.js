@@ -60,6 +60,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Mobile Tab Bar active state on scroll
+  var tabBar = document.getElementById('mobileTabBar');
+  if (tabBar) {
+    var tabLinks = tabBar.querySelectorAll('.tab-item');
+    var sectionIds = ['location', 'specs', 'sizes', 'hero'];
+
+    function updateActiveTab() {
+      var scrollPos = window.scrollY + window.innerHeight / 3;
+      var activeHref = '#hero';
+      for (var i = 0; i < sectionIds.length; i++) {
+        var sec = document.getElementById(sectionIds[i]);
+        if (sec && sec.offsetTop <= scrollPos) {
+          activeHref = '#' + sectionIds[i];
+        }
+      }
+      tabLinks.forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('href') === activeHref);
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveTab, { passive: true });
+    updateActiveTab();
+  }
+
   // Intersection Observer for scroll animations
   if ('IntersectionObserver' in window) {
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
